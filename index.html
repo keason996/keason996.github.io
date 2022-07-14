@@ -13,6 +13,7 @@
 </head>
 <body>
 
+
     <!--导航栏 -->
 
     <!-- ui 表示组件；inverted 表示反色；attached去圆角 -->
@@ -24,29 +25,42 @@
                 <h2 class="ui green header item">Keason的博客</h2>
                 <!-- item 分块 -->
 
-                <a href="#" class="item"> <i class="home icon"></i> 首页</a>
-                <a href="#" class="item"> <i class="idea icon"></i> 分类</a>
-                <a href="#" class="item"> <i class="tags icon"></i> 标签</a>
-                <a href="#" class="item"> <i class="info icon"></i> 关于我</a>
+                <a href="#" class="m-item item m-mobile-hide"> <i class=" home icon"></i> 首页</a>
+                <a href="#" class="m-item item m-mobile-hide"> <i class=" idea icon"></i> 分类</a>
+                <a href="#" class="m-item item m-mobile-hide"> <i class=" tags icon"></i> 标签</a>
+                <a href="#" class="m-item item m-mobile-hide"> <i class=" archive icon"></i> 归档</a>
+                <a href="#" class="m-item item m-mobile-hide"> <i class=" info icon"></i> 关于我</a>
 
-                <div class="right menu container">
-                    <div class="item container">
+                <div class="right menu container  m-mobile-hide">
+                    <div class="item container m-mobile-hide">
                       <div class="ui icon input container">
                         <input type="text" placeholder="搜索">
                         <i class="search link icon"></i>
                       </div>
                     </div>
                   </div>
+
+                  
+                  </div>
             </div>
 
             
         </div>
-        
+        <div>
+          <a href="" class="ui button black icon m-topright m-non-mobile-hide k">
+            <i class="sidebar icon"></i>
+          </a>
     </nav>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 
+    <script>
+      $(".k").click(function () {
+        $(".m-item").toggleClass("m-mobile-hide")
+      });
+    </script>
     <!-- 主体 -->
     <div style="padding-top: 2em !important;padding-bottom: 2em !important;" class="ui container">
         <!-- 图片显示 -->
@@ -252,7 +266,7 @@
                         
                 </div>
     
-                <div class="ui five wide column">
+                <div class="ui five wide column m-mobile-hide">
                     <div class="ui segment top stackable">
                         
                         <h4 class="ui teal header">分类</h4>
@@ -281,10 +295,6 @@
                     
                     </div>
 
-                    <div class="ui segment top">
-                      <h4 class="ui teal header">联系我</h4>
-                      <img src="./code/static/images/wechat.jpg" alt="" style="width: 250px; height: 250px; ">
-                    </div>
                 </div>
             </div>
 
@@ -297,14 +307,9 @@
     <footer class="ui inverted vertical segment">
         <div class="ui container center aligned">
             <!-- center aligned居中 -->
-            <div class="ui inverted divided grid">
+            <div class="ui inverted divided stackable grid">
 
-                <!-- 布局,共分为16份 -->
-                <div class="ui three wide column">
-                    <img class="ui rounded image" src="./code/static/images/wechat.jpg" style="width: 100px;">
-                </div>
-
-                <div class="ui three wide column">
+                <div class="ui four wide column">
 
                     <h4 class="ui header inverted">最新博客</h4>
                     <div class="ui inverted link list">
@@ -317,7 +322,7 @@
                     
                 </div>
 
-                <div class="ui three wide column">
+                <div class="ui four wide column">
                     <h4 class="ui header inverted">联系方式</h4>
                     <div class="ui inverted link list">
                         <p class="item" >1</p>
@@ -326,7 +331,7 @@
                         <p class="item" >1</p>
                     </div>
                 </div>
-                <div class="ui seven wide column">
+                <div class="ui four wide column">
                     <h4 class="ui header inverted">励志话语</h4>
                     <div class="ui inverted link list">
                         <p class="item" >1</p>

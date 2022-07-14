@@ -1,14 +1,35 @@
-.article{
-    border: 2px !important;
-    border-color: grey !important;
+.article {
+  border: 2px !important;
+  border-color: grey !important;
 }
 
-.top{
-    padding-top: 0.2em !important; 
-    padding-bottom: 0.2em !important;
+.top {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2em !important;
 }
 
-hr{
-    color: gray;
+hr {
+  color: gray;
 }
 
+.m-topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .m-mobile-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .m-non-mobile-hide {
+    display: none !important;
+  }
+}
+
+body {
+  background: url(../images/double-bubble-outline.webp);
+}
